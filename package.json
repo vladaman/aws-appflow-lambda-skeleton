@@ -1,0 +1,19 @@
+{
+  "name": "fk-demo-connector",
+  "version": "1.0.20",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm version patch && rm -f out.zip && zip -r out.zip ./ && node-lambda deploy -e prod -n fkDemoConnector -f ../deploy.env --runtime nodejs20.x --tracingConfig Active -t 360 -z out.zip",
+    "run:describe": "node-lambda run --contextFile ../context.json -f ../.env -j event-DescribeConnectorConfigurationRequest.json",
+    "run:validate": "node-lambda run --contextFile ../context.json -f ../.env -j event-ValidateConnectorRuntimeSettingsRequest.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.481.0"
+  }
+}
