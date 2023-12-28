@@ -1,12 +1,10 @@
 # AWS AppsFlow Custom Connector Lambda Handler
 
-_For nodejs and javascript_
+_Developed for Node.js and JavaScript_
 
-As of now there is no SDK for NodeJS to handle AppsFlow Custom Connector. This project is simple attempt to
-reverse-engineer AppsFlow Python/Java SDK.
+Currently, there is no dedicated Node.js SDK available for managing AppsFlow Custom Connectors. This project aims to address this gap by offering a straightforward attempt to reverse-engineer the AppsFlow Python/Java SDK.
 
-Project uses `node-lambda` for local deployment but you get the idea how to run it in your enviroment. Code shows basic
-usage how to build your own AppFlow connector in Javascript.
+The implementation utilizes node-lambda for local deployment, providing insight into running it within your environment. The code serves as a fundamental guide on constructing your own AppFlow connector in JavaScript.
 
 Tested with:
 
