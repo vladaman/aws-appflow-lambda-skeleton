@@ -78,7 +78,7 @@ export const handler = async (event, context) => {
             entities: [{
                 entityIdentifier: "productEntity", // Unique identifier for the entity. Can be entityId, entityName, entityPath+name, entityUrl, etc.
                 hasNestedEntities: false,
-                isWritable: false,
+                isWritable: true,
                 label: "Demo Product Object",
                 description: "My Description"
             }],
