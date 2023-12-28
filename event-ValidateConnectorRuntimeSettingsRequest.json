@@ -1,0 +1,9 @@
+{
+    "type": "ValidateConnectorRuntimeSettingsRequest",
+    "scope": "CONNECTOR_PROFILE",
+    "connectorRuntimeSettings": {
+        "myKey": "ded"
+    },
+    "authenticationType": null
+}
+
