@@ -1,0 +1,88 @@
+{
+    "type": "WriteDataRequest",
+    "entityIdentifier": "productEntity",
+    "operation": "INSERT",
+    "idFieldNames": null,
+    "records": [
+        "{\"field_1\":\"sub_1ORX7CLpVlCqT\"}",
+        "{\"field_1\":\"sub_1ORWisLpVlCqT\"}"
+    ],
+    "allOrNone": false,
+    "connectorContext": {
+        "connectorRuntimeSettings": {
+            "myKey": "MyLabel"
+        },
+        "credentials": {
+            "secretArn": "arn:aws:secretsmanager:eu-west-1:12345678012:secret:appflow!111111111111111:111111111111111-Demo-MyConnection-11111111111-QiBjcM",
+            "confusedDeputyHeader": null,
+            "roleDelegation": null,
+            "authenticationType": "BasicAuth"
+        },
+        "apiVersion": "v1.0",
+        "flowName": "MyDemoWrite",
+        "executionId": "64c29dc4-ced0-44d1-a1eb-8bf21fd04709",
+        "connectorProfileLabel": "MyConnection",
+        "entityDefinition": {
+            "entity": {
+                "entityIdentifier": "productEntity",
+                "hasNestedEntities": false,
+                "label": null,
+                "description": null,
+                "customProperties": null,
+                "supportedAPIPatternTypes": null,
+                "hasAPIPatternTypeHandlerSupport": false,
+                "connectorEntityOverrides": null,
+                "isWritable": true
+            },
+            "fields": [
+                {
+                    "fieldName": "field_1",
+                    "dataType": "String",
+                    "dataTypeLabel": "String Label",
+                    "label": "My Field 1",
+                    "description": "My custom test field 1",
+                    "defaultValue": null,
+                    "constraints": {
+                        "allowedLengthRange": null,
+                        "allowedValueRange": null,
+                        "allowedValues": null,
+                        "allowedValuesRegexPattern": null,
+                        "allowedDateFormat": null
+                    },
+                    "readProperties": {
+                        "isOrderable": false,
+                        "isQueryable": true,
+                        "isTimestampFieldForIncrementalQueries": true,
+                        "isRetrievable": true,
+                        "isNullable": true
+                    },
+                    "writeProperties": {
+                        "supportedWriteOperations": null,
+                        "isCreatable": true,
+                        "isUpdatable": true,
+                        "isUpsertable": true,
+                        "isDefaultedOnCreate": true,
+                        "isNullable": true
+                    },
+                    "subFields": null,
+                    "filterOperators": [
+                        "NOT_EQUAL_TO",
+                        "EQUAL_TO",
+                        "LESS_THAN",
+                        "LESS_THAN_OR_EQUAL_TO",
+                        "GREATER_THAN",
+                        "GREATER_THAN_OR_EQUAL_TO",
+                        "CONTAINS"
+                    ],
+                    "customProperties": {},
+                    "parentIdentifier": null,
+                    "isPrimaryKey": false,
+                    "isDefaultTimestampFieldForIncrementalQueries": null,
+                    "isDeprecated": false
+                }
+            ],
+            "customProperties": null
+        },
+        "privateLinkEndpointConfiguration": null
+    }
+}

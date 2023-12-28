@@ -1,10 +1,11 @@
 /**
  * Event received by lambda
  * @typedef {Object} AppFlowEventRequest
- * @property {'DescribeConnectorConfigurationRequest'|'ValidateConnectorRuntimeSettingsRequest'|'ValidateCredentialsRequest'|'ListEntitiesRequest'|'DescribeEntityRequest'|'QueryDataRequest'} type - Event Type
+ * @property {'DescribeConnectorConfigurationRequest'|'ValidateConnectorRuntimeSettingsRequest'|'ValidateCredentialsRequest'|'ListEntitiesRequest'|'DescribeEntityRequest'|'QueryDataRequest'|'WriteDataRequest'} type - Event Type
  * @property {'SOURCE_AND_DESTINATION'|'SOURCE'|'DESTINATION'|'CONNECTOR_PROFILE'} scope - Event Scope
  * @property {AppsFlowCredentials} credentials -
  * @property {string} entityIdentifier -
+ * @property {'INSERT'|'UPDATE'|'UPSERT'|'DELETE'} operation -
  * @property {string[]} selectedFieldNames -
  */
 

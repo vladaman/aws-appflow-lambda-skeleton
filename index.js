@@ -142,6 +142,23 @@ export const handler = async (event, context) => {
             nextToken: null,
             records: records// List of json serialized string of the entity record as per the entity metadata.
         }
+    } else if (event.type === 'WriteDataRequest') {
+        // For Destination
+        switch (event.operation) {
+            case "INSERT":
+                break;
+            case "UPDATE":
+                break;
+            case "UPSERT":
+                break;
+            case "DELETE":
+                break;
+        }
+
+        return {
+            isSuccess: true,
+            errorDetails: null
+        }
     }
 
     throw new Error('Unsupported Event');
