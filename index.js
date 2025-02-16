@@ -101,32 +101,60 @@ export const handler = async (event, context) => {
                     label: "Demo Product Object",
                     description: "My Description"
                 },
-                fields: [{
-                    fieldName: "field_1",
-                    dataType: "String", // Boolean, Date, String, Struct, DateTime, Float, Integer, Double, Long, BigInteger, BigDecimal, ByteArray, List, Map, Short
-                    dataTypeLabel: "String Label",
-                    label: "My Field 1",
-                    description: "My custom test field 1",
-                    isPrimaryKey: false,
-                    // defaultValue: "",
-                    isDeprecated: false,
-                    // constraints: {}
-                    readProperties: {
-                        isRetrievable: true,
-                        isNullable: true,
-                        isQueryable: true,
-                        isTimestampFieldForIncrementalQueries: true
+                fields: [
+                    {
+                        fieldName: "id",
+                        dataType: "Long", // Boolean, Date, String, Struct, DateTime, Float, Integer, Double, Long, BigInteger, BigDecimal, ByteArray, List, Map, Short
+                        dataTypeLabel: "Long Label",
+                        label: "Primary Id (Long)",
+                        description: "My custom test field 1. Long type.",
+                        isPrimaryKey: true,
+                        // defaultValue: "",
+                        isDeprecated: false,
+                        // constraints: {}
+                        readProperties: {
+                            isRetrievable: true,
+                            isNullable: false,
+                            isQueryable: true,
+                            isTimestampFieldForIncrementalQueries: false
+                        },
+                        writeProperties: {
+                            isCreatable: true,
+                            isUpdatable: false,
+                            isNullable: false,
+                            isUpsertable: false,
+                            isDefaultedOnCreate: false
+                        },
+                        filterOperators: ["NOT_EQUAL_TO", "EQUAL_TO", "LESS_THAN", "LESS_THAN_OR_EQUAL_TO", "GREATER_THAN", "GREATER_THAN_OR_EQUAL_TO", "CONTAINS"],
+                        customProperties: {}
                     },
-                    writeProperties: {
-                        isCreatable: true,
-                        isUpdatable: true,
-                        isNullable: true,
-                        isUpsertable: true,
-                        isDefaultedOnCreate: true
-                    },
-                    filterOperators: ["NOT_EQUAL_TO", "EQUAL_TO", "LESS_THAN", "LESS_THAN_OR_EQUAL_TO", "GREATER_THAN", "GREATER_THAN_OR_EQUAL_TO", "CONTAINS"],
-                    customProperties: {}
-                }],
+                    {
+                        fieldName: "field_1",
+                        dataType: "String", // Boolean, Date, String, Struct, DateTime, Float, Integer, Double, Long, BigInteger, BigDecimal, ByteArray, List, Map, Short
+                        dataTypeLabel: "String Label",
+                        label: "My Field 1",
+                        description: "My custom test field 1",
+                        isPrimaryKey: false,
+                        // defaultValue: "",
+                        isDeprecated: false,
+                        // constraints: {}
+                        readProperties: {
+                            isRetrievable: true,
+                            isNullable: true,
+                            isQueryable: true,
+                            isTimestampFieldForIncrementalQueries: false
+                        },
+                        writeProperties: {
+                            isCreatable: true,
+                            isUpdatable: true,
+                            isNullable: true,
+                            isUpsertable: true,
+                            isDefaultedOnCreate: true
+                        },
+                        filterOperators: ["NOT_EQUAL_TO", "EQUAL_TO", "LESS_THAN", "LESS_THAN_OR_EQUAL_TO", "GREATER_THAN", "GREATER_THAN_OR_EQUAL_TO", "CONTAINS"],
+                        customProperties: {}
+                    }
+                ],
                 customProperties: {}
             },
             cacheControl: {
